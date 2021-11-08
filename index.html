@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WeatherIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="hero is-info is-fullheight ">
+        <nav class="navbar is-flex is-flex-direction-row is-justify-content-center" role="navigation"
+            aria-label="main navigation">
+            <h1 class="has-background-info-dark is-size-1 p-2 m-2">Weather IO</h1>
+        </nav>
+        <div class="hero-body is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-3">
+                    <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification is-link">
+                                <div class="content">
+                                    <p class="title ">Search City:</p>
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Text input">
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-info">Search</button>
+                                    </div>
+                                    <div class="content">
+                                        <div class="tile is-parent">
+                                            <article class="tile is-child notification is-info">
+
+                                            </article>
+                                        </div>
+                                    </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="tile is-parent is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
+                    <article
+                        class="tile is-child notification is-link p-3 m-3 is-4 is-justify-content-center is-align-content-center">
+                        <p class="title ">Grand Blanc ("todays date")</p>
+                        <div class="content">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="content">
+                                        <dl>
+                                            <dd id="temp">Temp : </dd>
+                                            <dd id="wind">Wind : </dd>
+                                            <dd id=hummidity>Humidity :</dd>
+                                            <dd id="uv">UV Index :</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <br>
+                    <br>
+                    <article class="tile is-child notification is-link">
+                        <p class="title">5-Day Forecast:</p>
+                        <div
+                            class="content is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-info">
+                                    <p class="title">date</p>
+                                    <p class="subtitle">image</p>
+                                    <dl>
+                                        <dd>Temp : </dd>
+                                        <dd>Wind : </dd>
+                                        <dd>Humidity :</dd>
+                                    </dl>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-info">
+                                    <p class="title">date</p>
+                                    <p class="subtitle">image</p>
+                                    <dl>
+                                        <dd>Temp : </dd>
+                                        <dd>Wind : </dd>
+                                        <dd>Humidity :</dd>
+                                    </dl>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-info">
+                                    <p class="title">date</p>
+                                    <p class="subtitle">image</p>
+                                    <dl>
+                                        <dd>Temp : </dd>
+                                        <dd>Wind : </dd>
+                                        <dd>Humidity :</dd>
+                                    </dl>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-info">
+                                    <p class="title">date</p>
+                                    <p class="subtitle">image</p>
+                                    <dl>
+                                        <dd>Temp : </dd>
+                                        <dd>Wind : </dd>
+                                        <dd>Humidity :</dd>
+                                    </dl>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-info">
+                                    <p class="title">date</p>
+                                    <p class="subtitle">image</p>
+                                    <dl>
+                                        <dd>Temp : </dd>
+                                        <dd>Wind : </dd>
+                                        <dd>Humidity :</dd>
+                                    </dl>
+                                </article>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
