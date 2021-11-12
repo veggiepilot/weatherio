@@ -1,118 +1,62 @@
+// Search feild DOM element, element value, DOM button element //
 const userSearchEL = document.querySelector("#user-form");
 const citySearchInput = document.querySelector("#city");
-const citySearchString = document.querySelector(".title");
-const fiveDayForecastContainer = document.querySelector("#fiveday");
-const localStorage = localStorage;
+const submitBtn = document.querySelector(".button");
 
-const userSubmisionQueryHandler = (e) => {
+// DOM elements to display
+// City, Tempature, Wind, Humidity, UV Index,  //
+const citySearchDisplay = document.querySelector(".title");
+const cityTempDisplay = document.querySelector("#temp");
+const cityWindDispay = document.querySelector("#wind");
+const cityHumidityDisplay = document.querySelector("#humidity");
+// const cityUVindexDisplay = document.querySelector("#uvi");
+
+// Listen for user submision and then fetch the data //
+submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  var city = userSearchEL.value.trim();
-  if (city) {
-    getCityWeather(city);
-    citySearchString.value = "";
-  } else {
-  }
-};
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=` +
+      citySearchInput.value +
+      `&appid=9c66b2e77274737adc119b1bd2f997a7l`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      let cityValue = citySearchInput.value;
+      let tempValue = data["main"]["temp"];
+      let windValue = data["wind"]["speed"];
+      let humidityValue = data["main"]["humidity"];
+      citySearchDisplay.innerText = cityValue;
+      cityTempDisplay.innerText = tempValue;
+      cityWindDispay.innerText = windValue;
+      cityHumidityDisplay.innerText = humidityValue;
+    })
+  // fetch(
+  //   `https://api.openweathermap.org/data/2.5/onecall?lat=` +
+  //     latitude +`&lon=` + longitude + 
+  //       `&appid=9c66b2e77274737adc119b1bd2f997a7&units=imperial`
+  //     )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       let uviValue = data["current"]["uvi"];
+  //       cityUVindexDisplay.innerText = uviValue;
+  //     })
+      .catch((err) => console.log(err));
+});
 
-const storedCityClickHandler = (e) => {
-  var storedCityButton = e.target.getAtrtribute("data-button");
-  if (storedCityButton) {
-    getStoredCityWeather(storedCityButton);
-    renderFiveDay(getCityWeather)
-  }
-};
 
-const getCityWeather = function (city) {
-  var apiUrl =
-    // "insert City apu url code" +
-    city +
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayCity(data, city);
-          });
-        } else {
-          alert("error");
-        }
-      })
-      .catch(function (err) {
-        alert("Unable to Connect");
-      });
-};
 
-const getCityTemp = function (temp) {
-  var apiUrl =
-    // "insert City apu url code" +
-    temp +
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayCity(data, temp);
-          });
-        } else {
-          alert("Error");
-        }
-      })
-      .catch(function (err) {
-        alert("Unable to Connect");
-      });
-};
 
-const getCityWind = function (wind) {
-  var apiUrl =
-    // "insert City apu url code" +
-    wind +
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayCity(data, wind);
-          });
-        } else {
-          alert("Error");
-        }
-      })
-      .catch(function (err) {
-        alert("Unable to Connect");
-      });
-};
 
-const getCityHumidity = function (humid) {
-  var apiUrl =
-    // "insert City apu url code" +
-    humid +
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayCity(data, humid);
-          });
-        } else {
-          alert("error");
-        }
-      })
-      .catch(function (err) {
-        alert("Unable to Connect");
-      });
-};
 
-const getCityUV = function (uv) {
-  var apiUrl =
-    // "insert City apu url code" +
-    uv +
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayCity(data, uv);
-          });
-        } else {
-          alert("error");
-        }
-      })
-      .catch(function (err) {
-        alert("Unable to Connect");
-      });
-};
+
+//  Generate the Local Storage Saved City from the Click Event.
+//  Diplay it on the page.
+
+// const storedCityClickHandler = (e) => {
+//   e.preventDefault();
+//   var storedCityButton = e.target.getAtrtribute("data-button");
+//   if (storedCityButton) {
+//     getStoredCityWeather(storedCityButton.value);
+//     renderFiveDay(getCityWeather);
+//   }
+// };
