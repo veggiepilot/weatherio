@@ -12,42 +12,41 @@
     <section class="hero is-info is-fullheight ">
         <nav class="navbar is-flex is-flex-direction-row is-justify-content-center" role="navigation"
             aria-label="main navigation">
-            <h1 class="has-background-info-dark is-size-1 p-2 m-2">Weather IO</h1>
+            <h1 class="is-size-1 p-2 m-2">Weather IO</h1>
         </nav>
         <div class="hero-body is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
             <div class="tile is-ancestor">
-                <div class="tile is-vertical is-3">
-                    <div class="tile">
+                <div class="tile is-vertical">
                         <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-link">
+                            <article class="tile is-child  is-link">
                                 <div class="content">
                                     <p class="title ">Search City:</p>
-                                    <div class="control">
-                                        <input class="input" type="text" placeholder="Text input">
+                                    <div class="control" id="city-search">
+                                        <input class="input" id="city" type="text" placeholder="Enter City">
                                     </div>
                                     <div class="control">
-                                        <button class="button is-info">Search</button>
+                                        <button type="submit" class="button is-info">Search</button>
                                     </div>
                                     <div class="content">
                                         <div class="tile is-parent">
-                                            <article class="tile is-child notification is-info">
-
+                                            <article class="tile is-child notification is-link">
+                                                <dl>
+                                                    <dd class="btn"><button class="button is-info">localstorage</button>
+                                                    </dd>
+                                                </dl>
                                             </article>
                                         </div>
                                     </div>
                             </article>
                         </div>
-                    </div>
                 </div>
-                <div
-                    class="tile is-parent is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
-                    <article
-                        class="tile is-child notification is-link p-3 m-3 is-4 is-justify-content-center is-align-content-center">
+                <div class="tile is-parent is-horizontal">
+                    <article class="tile is-child  is-link p-3 m-3">
                         <p class="title ">Grand Blanc ("todays date")</p>
                         <div class="content">
                             <div class="card">
                                 <div class="card-content">
-                                    <div class="content">
+                                    <div class="content is-link">
                                         <dl>
                                             <dd id="temp">Temp : </dd>
                                             <dd id="wind">Wind : </dd>
@@ -59,71 +58,70 @@
                             </div>
                         </div>
                     </article>
-                    <br>
-                    <br>
-                    <article class="tile is-child notification is-link">
-                        <p class="title">5-Day Forecast:</p>
-                        <div
-                            class="content is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
-                            <div class="tile is-parent">
-                                <article class="tile is-child notification is-info">
-                                    <p class="title">date</p>
-                                    <p class="subtitle">image</p>
-                                    <dl>
-                                        <dd>Temp : </dd>
-                                        <dd>Wind : </dd>
-                                        <dd>Humidity :</dd>
-                                    </dl>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child notification is-info">
-                                    <p class="title">date</p>
-                                    <p class="subtitle">image</p>
-                                    <dl>
-                                        <dd>Temp : </dd>
-                                        <dd>Wind : </dd>
-                                        <dd>Humidity :</dd>
-                                    </dl>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child notification is-info">
-                                    <p class="title">date</p>
-                                    <p class="subtitle">image</p>
-                                    <dl>
-                                        <dd>Temp : </dd>
-                                        <dd>Wind : </dd>
-                                        <dd>Humidity :</dd>
-                                    </dl>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child notification is-info">
-                                    <p class="title">date</p>
-                                    <p class="subtitle">image</p>
-                                    <dl>
-                                        <dd>Temp : </dd>
-                                        <dd>Wind : </dd>
-                                        <dd>Humidity :</dd>
-                                    </dl>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child notification is-info">
-                                    <p class="title">date</p>
-                                    <p class="subtitle">image</p>
-                                    <dl>
-                                        <dd>Temp : </dd>
-                                        <dd>Wind : </dd>
-                                        <dd>Humidity :</dd>
-                                    </dl>
-                                </article>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </div>
+        </div>
+        <div class=" tile is-parent is-horizontal is-desktop is-hidden" id="fiveday">
+            <article class="tile is-child is-flex-wrap is-link is-multiline">
+                <p class="title">5-Day Forecast:</p>
+                <div class="content  is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                    <div class="tile is-parent" >
+                        <article class="tile is-child  is-info">
+                            <p class="title">date</p>
+                            <p class="subtitle">image</p>
+                            <dl>
+                                <dd>Temp : </dd>
+                                <dd>Wind : </dd>
+                                <dd>Humidity :</dd>
+                            </dl>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child  is-info">
+                            <p class="title">date</p>
+                            <p class="subtitle">image</p>
+                            <dl>
+                                <dd>Temp : </dd>
+                                <dd>Wind : </dd>
+                                <dd>Humidity :</dd>
+                            </dl>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child  is-info">
+                            <p class="title">date</p>
+                            <p class="subtitle">image</p>
+                            <dl>
+                                <dd>Temp : </dd>
+                                <dd>Wind : </dd>
+                                <dd>Humidity :</dd>
+                            </dl>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child  is-info">
+                            <p class="title">date</p>
+                            <p class="subtitle">image</p>
+                            <dl>
+                                <dd>Temp : </dd>
+                                <dd>Wind : </dd>
+                                <dd>Humidity :</dd>
+                            </dl>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child  is-info">
+                            <p class="title">date</p>
+                            <p class="subtitle">image</p>
+                            <dl>
+                                <dd>Temp : </dd>
+                                <dd>Wind : </dd>
+                                <dd>Humidity :</dd>
+                            </dl>
+                        </article>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 </body>
