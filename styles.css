@@ -1,0 +1,31 @@
+body {
+    box-sizing: border-box;
+    color: #3a86ff;
+    background-color:#bedcee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+p { 
+    font-family: 'Montserrat', sans-serif;
+    color: #3a86ff;
+}
+
+.button {
+    background-color:transparent;
+}
+
+span {
+    background-color:transparent;
+}
+
+input {
+    color: #3a86ff;
+    background-color:transparent;
+}
+
+.tile .is-parent {
+    color: #3a86ff;
+    background-color:transparent;
+    font-family: 'Ovo', serif;
+}

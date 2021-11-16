@@ -5,128 +5,181 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WeatherIO</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ovo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <section class="hero is-info is-fullheight ">
+    <section class="hero is-halfheight ">
         <nav class="navbar is-flex is-flex-direction-row is-justify-content-center" role="navigation"
             aria-label="main navigation">
             <h1 class="is-size-1 p-2 m-2">Weather IO</h1>
         </nav>
         <div class="hero-body is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
             <div class="tile is-ancestor">
-                <div class="tile is-vertical">
-                    <div class="tile is-parent is-vertical">
-                        <article class="tile is-child  is-link">
-                            <div class="content">
-                                <p class="title ">Search City:</p>
-                                <div class="control" id="city-search">
-                                    <input class="input" id="city" type="text" placeholder="Enter City">
-                                    </input>
-                                </div>
-                                <div class="control">
-                                    <button type="submit" class="button is-info">Search</button>
-                                </div>
-                                <div class="content">
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child notification is-link">
-                                            <dl>
-                                                <dd class="btn"><button class="button data-button is-info"
-                                                        type="submit">//localSAves//</button>
-                                                </dd>
-                                            </dl>
-                                        </article>
-                                    </div>
-                                </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <article class="tile is-child  is-link p-3 m-3">
-                        <p class="title city ">Grand Blanc:</p>
+                <div class="tile is-parent is-4">
+                    <article class="tile is-child">
                         <div class="content">
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="content is-link">
-                                        <dl>
-                                            <span class="tag is-link is-large is-light p-2 m-3">Temp : </span><dd id="temp"></dd>
-                                            <span class="tag is-link is-large is-light p-2 m-3">Wind :</span><dd id="wind"> </dd>
-                                            <span class="tag is-link is-large is-light p-2 m-3">Humidity :</span><dd id="humidity"></dd>
-                                            <span class="tag is-link is-large is-light p-2 m-3">UV Index :</span><dd id="uvi"></dd>
-                                        </dl>
+                            <p class="title ">Search City:</p>
+                            <div class="control" id="city-search">
+                                <input class="input" id="city" type="text" placeholder="Enter City">
+                                </input>
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button">Search</button>
+                            </div>
+                            <div class="tile is-parent is-flex is-flex-direction-columm is-justify-content-center is-align-content-center">
+                                <article class="tile is-flex-direction-columm is-justify-content-center is-align-content-center is-child">
+                                    <dl>
+                                        <dd class="btn"><button class="button data-button"
+                                                type="submit">//localSAves//</button>
+                                        </dd>
+                                    </dl>
+                                </article>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tile is-parent is-8 is-multiline">
+                    <article class="tile is-child p-3 m-3">
+                        <p class="title city ">Grand Blanc:</p>
+                        <div class="card">
+                            <div class="card-content">
+                                <nav class="level">
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Temp</p><i class="fas fa-temperature-high"></i>
+                                            <p class="title" id="temp"></p>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Wind</p><i class="fas fa-wind"></i>
+                                            <p class="title" id="wind"></p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Humidity</p><i class="fas fa-cloud-rain"></i>
+                                            <p class="title" id="humidity"></p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">UV Index</p><i class="fas fa-sun"></i>
+                                            <p class="title" id="uvi"></p>
+                                        </div>
+                                    </div>
+                                </nav>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
         </div>
-        <div class=" tile is-parent is-horizontal is-desktop" id="fiveday">
-            <article class="tile is-child is-flex-wrap is-link is-multiline">
-                <p class="title">5-Day Forecast:</p>
-                <div class="content  is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
-                    <div class="tile is-parent">
-                        <article class="tile is-child  is-info">
-                            <p class="title" id="date">date</p>
-                            <p class="subtitle">image</p>
-                            <dl>
-                                <dd>Temp : </dd>
-                                <dd>Wind : </dd>
-                                <dd>Humidity :</dd>
-                            </dl>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child  is-info">
-                            <p class="title">date</p>
-                            <p class="subtitle">image</p>
-                            <dl>
-                                <dd>Temp : </dd>
-                                <dd>Wind : </dd>
-                                <dd>Humidity :</dd>
-                            </dl>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child  is-info">
-                            <p class="title">date</p>
-                            <p class="subtitle">image</p>
-                            <dl>
-                                <dd>Temp : </dd>
-                                <dd>Wind : </dd>
-                                <dd>Humidity :</dd>
-                            </dl>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child  is-info">
-                            <p class="title">date</p>
-                            <p class="subtitle">image</p>
-                            <dl>
-                                <dd>Temp : </dd>
-                                <dd>Wind : </dd>
-                                <dd>Humidity :</dd>
-                            </dl>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child  is-info">
-                            <p class="title">date</p>
-                            <p class="subtitle">image</p>
-                            <dl>
-                                <dd>Temp : </dd>
-                                <dd>Wind : </dd>
-                                <dd>Humidity :</dd>
-                            </dl>
-                        </article>
-                    </div>
+    </section>
+    <section class="hero is-halfheight is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
+        <div class="hero-body is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
+            <p class="title">5-day Forecast</p>
+       
+            <div class="card">
+                <div class="card-title has-text-centered" id="date"></div>
+                <div class="card-title has-text-centered"id="img"></div>
+                <div class="card-content">
+                    <nav class="level is-mobile">
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading is-size-5">Temp</p><i class="fas fa-temperature-high"></i>
+                                <p class="title" id="temp"></p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading is-size-5">Wind</p><i class="fas fa-wind"></i>
+                                <p class="title" id="wind"></p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading is-size-5">Humidity</p><i class="fas fa-cloud-rain"></i>
+                                <p class="title" id="humidity"></p>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-            </article>
+            </div>                 
         </div>
     </section>
     <script src="index.js"></script>
 </body>
-
 </html>
+
+<!-- <p class="title">5-Day Forecast:</p>
+<div class="content  is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+    <div class="tile is-parent">
+        <article class="tile is-child  is-info">
+            <p class="title" id="date">date</p>
+            <p class="subtitle">image</p>
+            <dl>
+                <dd>Temp : </dd>
+                <dd>Wind : </dd>
+                <dd>Humidity :</dd>
+            </dl>
+        </article>
+    </div>
+    <div class="tile is-parent">
+        <article class="tile is-child  is-info">
+            <p class="title">date</p>
+            <p class="subtitle">image</p>
+            <dl>
+                <dd>Temp : </dd>
+                <dd>Wind : </dd>
+                <dd>Humidity :</dd>
+            </dl>
+        </article>
+    </div>
+    <div class="tile is-parent">
+        <article class="tile is-child  is-info">
+            <p class="title">date</p>
+            <p class="subtitle">image</p>
+            <dl>
+                <dd>Temp : </dd>
+                <dd>Wind : </dd>
+                <dd>Humidity :</dd>
+            </dl>
+        </article>
+    </div>
+    <div class="tile is-parent">
+        <article class="tile is-child  is-info">
+            <p class="title">date</p>
+            <p class="subtitle">image</p>
+            <dl>
+                <dd>Temp : </dd>
+                <dd>Wind : </dd>
+                <dd>Humidity :</dd>
+            </dl>
+        </article>
+    </div>
+    <div class="tile is-parent">
+        <article class="tile is-child  is-info">
+            <p class="title">date</p>
+            <p class="subtitle">image</p>
+            <dl>
+                <dd>Temp : </dd>
+                <dd>Wind : </dd>
+                <dd>Humidity :</dd>
+            </dl>
+        </article>
+    </div>
+</div> -->
+
+
+
