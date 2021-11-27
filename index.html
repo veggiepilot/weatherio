@@ -39,7 +39,7 @@
                                 <article class="tile is-flex-direction-columm is-justify-content-center is-align-content-center is-child">
                                     <dl>
                                         <dd class="btn"><button class="button data-button"
-                                                type="submit">//localSAves//</button>
+                                                type="submit"></button>
                                         </dd>
                                     </dl>
                                 </article>
@@ -50,7 +50,7 @@
 
                 <div class="tile is-parent is-8 is-multiline">
                     <article class="tile is-child p-3 m-3">
-                        <p class="title city ">Grand Blanc:</p>
+                        <p class="title city is-capitalized ">Grand Blanc:</p>
                         <div class="card">
                             <div class="card-content">
                                 <nav class="level">
@@ -87,9 +87,9 @@
         </div>
     </section>
     <section class="hero is-halfheight is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
-        <div class="hero-body is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
+            <div class="tile is-parent is-8 is-multiline">
+                <article class="tile is-child p-3 m-3">
             <p class="title">5-day Forecast</p>
-       
             <div class="card">
                 <div class="card-title has-text-centered" id="date"></div>
                 <div class="card-title has-text-centered"id="img"></div>
@@ -115,7 +115,34 @@
                         </div>
                     </nav>
                 </div>
-            </div>                 
+            </div>
+            <div class="card">
+                <div class="card-title has-text-centered" id="date"></div>
+                <div class="card-title has-text-centered"id="img"></div>
+                <div class="card-content">
+                    <nav class="level is-mobile">
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading is-size-5">Temp</p><i class="fas fa-temperature-high"></i>
+                                <p class="title" id="temp"></p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading is-size-5">Wind</p><i class="fas fa-wind"></i>
+                                <p class="title" id="wind"></p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading is-size-5">Humidity</p><i class="fas fa-cloud-rain"></i>
+                                <p class="title" id="humidity"></p>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </article>
+            </div>                  
         </div>
     </section>
     <script src="index.js"></script>
