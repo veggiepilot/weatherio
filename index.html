@@ -17,29 +17,28 @@
 </head>
 
 <body>
-    <section class="hero is-halfheight ">
-        <nav class="navbar is-flex is-flex-direction-row is-justify-content-center" role="navigation"
-            aria-label="main navigation">
-            <h1 class="is-size-1 p-2 m-2">Weather IO</h1>
-        </nav>
+    <section class="hero is-fullheight">
+        <h1>Weather.IO</h1>
+        <h2>Weather Dashboard</h2>
         <div class="hero-body is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
             <div class="tile is-ancestor">
-                <div class="tile is-parent is-4">
+                <div class="tile is-parent is-3">
                     <article class="tile is-child">
                         <div class="content">
                             <p class="title ">Search City:</p>
                             <div class="control" id="city-search">
                                 <input class="input" id="city" type="text" placeholder="Enter City">
                                 </input>
+                                <button type="submit" class="button is-info">Search</button>
                             </div>
                             <div class="control">
-                                <button type="submit" class="button">Search</button>
                             </div>
-                            <div class="tile is-parent is-flex is-flex-direction-columm is-justify-content-center is-align-content-center">
-                                <article class="tile is-flex-direction-columm is-justify-content-center is-align-content-center is-child">
+                            <div
+                                class="tile is-parent is-flex is-flex-direction-columm is-justify-content-center is-align-content-center is-hidden">
+                                <article
+                                    class="tile is-flex-direction-columm is-justify-content-center is-align-content-center is-child">
                                     <dl>
-                                        <dd class="btn"><button class="button data-button"
-                                                type="submit"></button>
+                                        <dd class="btn"><button class="button data-button" type="submit"></button>
                                         </dd>
                                     </dl>
                                 </article>
@@ -47,166 +46,190 @@
                         </div>
                     </article>
                 </div>
-
-                <div class="tile is-parent is-8 is-multiline">
+                <div class="tile is-parent is-8 is-multiline is-flex is-justify-content-center is-flex-direction-column">
+                    <p class="title city is-capitalized is-flex is-justify-content-center ">City:</p>
                     <article class="tile is-child p-3 m-3">
-                        <p class="title city is-capitalized ">Grand Blanc:</p>
                         <div class="card">
                             <div class="card-content">
                                 <nav class="level">
                                     <div class="level-item has-text-centered">
                                         <div>
-                                            <p class="heading is-size-5">Temp</p><i class="fas fa-temperature-high"></i>
+                                            <p class="heading is-size-5">Temp<i class="fas fa-temperature-high"></i></p>
                                             <p class="title" id="temp"></p>
                                         </div>
                                     </div>
                                     <div class="level-item has-text-centered">
                                         <div>
-                                            <p class="heading is-size-5">Wind</p><i class="fas fa-wind"></i>
+                                            <p class="heading is-size-5">Wind <i class="fas fa-wind"></i></p>
                                             <p class="title" id="wind"></p>
                                         </div>
                                     </div>
                                     <div class="level-item has-text-centered">
                                         <div>
-                                            <p class="heading is-size-5">Humidity</p><i class="fas fa-cloud-rain"></i>
+                                            <p class="heading is-size-5">Humidity <i class="fas fa-cloud-rain"></i></p>
                                             <p class="title" id="humidity"></p>
                                         </div>
                                     </div>
                                     <div class="level-item has-text-centered">
                                         <div>
-                                            <p class="heading is-size-5">UV Index</p><i class="fas fa-sun"></i>
+                                            <p class="heading is-size-5">UV Index <i class="fas fa-sun"></i></p>
                                             <p class="title" id="uvi"></p>
                                         </div>
                                     </div>
                                 </nav>
                             </div>
                         </div>
+                        <br>
+                        <div>
+                            <br>
+                        </div>
+                        <br>
+                        <section class="is-flex is-justify-content-center is-flex-direction-column is-hidden">
+                            <p class="title is-flex is-justify-content-center">5-day Forecast</p>
+                            <div class="columns">
+                                <div class="card is-mobile column p-2 m-3">
+                                    <div
+                                        class="level-item has-text-centered is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                                        <div>
+                                            <div class="card-title has-text-centered" id="date"></div>
+                                            <div class="card-title has-text-centered" id="img"></div>
+                                            <br>
+                                            <p class="heading is-size-5"> Temp <i class="fas fa-temperature-high"></i>
+                                            </p>
+                                            <p class="title" id="t"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Wind<i class="fas fa-wind"></i></p>
+                                            <p class="title" id="w"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Humidity<i class="fas fa-cloud-rain"></i></p>
+                                            <p class="title" id="h"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card is-mobile column p-2 m-3">
+                                    <div
+                                        class="level-item has-text-centered is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                                        <div>
+                                            <div class="card-title has-text-centered" id="date"></div>
+                                            <div class="card-title has-text-centered" id="img"></div>
+                                            <br>
+                                            <p class="heading is-size-5"> Temp <i class="fas fa-temperature-high"></i>
+                                            </p>
+                                            <p class="title" id="t"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Wind<i class="fas fa-wind"></i></p>
+                                            <p class="title" id="w"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Humidity<i class="fas fa-cloud-rain"></i></p>
+                                            <p class="title" id="h"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card is-mobile column p-2 m-3">
+                                    <div
+                                        class="level-item has-text-centered is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                                        <div>
+                                            <div class="card-title has-text-centered" id="date"></div>
+                                            <div class="card-title has-text-centered" id="img"></div>
+                                            <br>
+                                            <p class="heading is-size-5"> Temp <i class="fas fa-temperature-high"></i>
+                                            </p>
+                                            <p class="title" id="t"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Wind<i class="fas fa-wind"></i></p>
+                                            <p class="title" id="w"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Humidity<i class="fas fa-cloud-rain"></i></p>
+                                            <p class="title" id="h"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card is-mobile column p-2 m-3">
+                                    <div
+                                        class="level-item has-text-centered is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                                        <div>
+                                            <div class="card-title has-text-centered" id="date"></div>
+                                            <div class="card-title has-text-centered" id="img"></div>
+                                            <br>
+                                            <p class="heading is-size-5"> Temp <i class="fas fa-temperature-high"></i>
+                                            </p>
+                                            <p class="title" id="t"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Wind<i class="fas fa-wind"></i></p>
+                                            <p class="title" id="w"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Humidity<i class="fas fa-cloud-rain"></i></p>
+                                            <p class="title" id="h"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card is-mobile column p-2 m-3">
+                                    <div
+                                        class="level-item has-text-centered is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
+                                        <div>
+                                            <div class="card-title has-text-centered" id="date"></div>
+                                            <div class="card-title has-text-centered" id="img"></div>
+                                            <br>
+                                            <p class="heading is-size-5"> Temp <i class="fas fa-temperature-high"></i>
+                                            </p>
+                                            <p class="title" id="t"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Wind<i class="fas fa-wind"></i></p>
+                                            <p class="title" id="w"></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading is-size-5">Humidity<i class="fas fa-cloud-rain"></i></p>
+                                            <p class="title" id="h"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </article>
                 </div>
             </div>
         </div>
     </section>
-    <section class="hero is-halfheight is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
-            <div class="tile is-parent is-8 is-multiline">
-                <article class="tile is-child p-3 m-3">
-            <p class="title">5-day Forecast</p>
-            <div class="card">
-                <div class="card-title has-text-centered" id="date"></div>
-                <div class="card-title has-text-centered"id="img"></div>
-                <div class="card-content">
-                    <nav class="level is-mobile">
-                        <div class="level-item has-text-centered">
-                            <div>
-                                <p class="heading is-size-5">Temp</p><i class="fas fa-temperature-high"></i>
-                                <p class="title" id="temp"></p>
-                            </div>
-                        </div>
-                        <div class="level-item has-text-centered">
-                            <div>
-                                <p class="heading is-size-5">Wind</p><i class="fas fa-wind"></i>
-                                <p class="title" id="wind"></p>
-                            </div>
-                        </div>
-                        <div class="level-item has-text-centered">
-                            <div>
-                                <p class="heading is-size-5">Humidity</p><i class="fas fa-cloud-rain"></i>
-                                <p class="title" id="humidity"></p>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title has-text-centered" id="date"></div>
-                <div class="card-title has-text-centered"id="img"></div>
-                <div class="card-content">
-                    <nav class="level is-mobile">
-                        <div class="level-item has-text-centered">
-                            <div>
-                                <p class="heading is-size-5">Temp</p><i class="fas fa-temperature-high"></i>
-                                <p class="title" id="temp"></p>
-                            </div>
-                        </div>
-                        <div class="level-item has-text-centered">
-                            <div>
-                                <p class="heading is-size-5">Wind</p><i class="fas fa-wind"></i>
-                                <p class="title" id="wind"></p>
-                            </div>
-                        </div>
-                        <div class="level-item has-text-centered">
-                            <div>
-                                <p class="heading is-size-5">Humidity</p><i class="fas fa-cloud-rain"></i>
-                                <p class="title" id="humidity"></p>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </article>
-            </div>                  
-        </div>
-    </section>
     <script src="index.js"></script>
 </body>
+
 </html>
-
-<!-- <p class="title">5-Day Forecast:</p>
-<div class="content  is-flex is-flex-direction-row is-justify-content-center is-align-content-center">
-    <div class="tile is-parent">
-        <article class="tile is-child  is-info">
-            <p class="title" id="date">date</p>
-            <p class="subtitle">image</p>
-            <dl>
-                <dd>Temp : </dd>
-                <dd>Wind : </dd>
-                <dd>Humidity :</dd>
-            </dl>
-        </article>
-    </div>
-    <div class="tile is-parent">
-        <article class="tile is-child  is-info">
-            <p class="title">date</p>
-            <p class="subtitle">image</p>
-            <dl>
-                <dd>Temp : </dd>
-                <dd>Wind : </dd>
-                <dd>Humidity :</dd>
-            </dl>
-        </article>
-    </div>
-    <div class="tile is-parent">
-        <article class="tile is-child  is-info">
-            <p class="title">date</p>
-            <p class="subtitle">image</p>
-            <dl>
-                <dd>Temp : </dd>
-                <dd>Wind : </dd>
-                <dd>Humidity :</dd>
-            </dl>
-        </article>
-    </div>
-    <div class="tile is-parent">
-        <article class="tile is-child  is-info">
-            <p class="title">date</p>
-            <p class="subtitle">image</p>
-            <dl>
-                <dd>Temp : </dd>
-                <dd>Wind : </dd>
-                <dd>Humidity :</dd>
-            </dl>
-        </article>
-    </div>
-    <div class="tile is-parent">
-        <article class="tile is-child  is-info">
-            <p class="title">date</p>
-            <p class="subtitle">image</p>
-            <dl>
-                <dd>Temp : </dd>
-                <dd>Wind : </dd>
-                <dd>Humidity :</dd>
-            </dl>
-        </article>
-    </div>
-</div> -->
-
-
-

@@ -1,8 +1,20 @@
 body {
-    box-sizing: border-box;
     color: #3a86ff;
-    background-color:#bedcee;
-    font-family: 'Montserrat', sans-serif;
+   background: rgb(0,8,36);
+background: linear-gradient(90deg, rgba(0,8,36,0.6951155462184874) 0%, rgb(129, 190, 207) 0%, rgb(143, 194, 248) 100%);
+    font-family: 'Ovo', serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Ovo', serif;
+    font-size: 72px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Ovo', serif;
+    font-size: 40px;
 }
 
 
@@ -12,6 +24,9 @@ p {
 }
 
 .button {
+    border-style: solid;
+    border-width: 1px;
+    border-color:#6f9fec;
     background-color:transparent;
 }
 
@@ -20,8 +35,17 @@ span {
 }
 
 input {
-    color: #3a86ff;
     background-color:transparent;
+}
+
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-color:#96baf5;
+    border-radius: 10px;
+    background-color:#bedcee;
+    box-shadow: 0 5px 5px #6f9fec;
+
 }
 
 .tile .is-parent {
