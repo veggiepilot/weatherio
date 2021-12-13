@@ -1,29 +1,35 @@
 body {
-    color: #3a86ff;
-   background: rgb(0,8,36);
-background: linear-gradient(90deg, rgba(0,8,36,0.6951155462184874) 0%, rgb(129, 190, 207) 0%, rgb(143, 194, 248) 100%);
-    font-family: 'Ovo', serif;
+    color: #232529;
+    background: rgb(0,8,36);
+    background: rgb(246, 255, 255);
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     text-align: center;
-    font-family: 'Ovo', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 72px;
 }
 
 h2 {
     text-align: center;
-    font-family: 'Ovo', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
 }
 
-
-p { 
+p {  
     font-family: 'Montserrat', sans-serif;
     color: #3a86ff;
 }
 
+
 .button {
+    border-style: solid;
+    border-width: 1px;
+    border-color:#6f9fec;
+}
+
+.data-button {
     border-style: solid;
     border-width: 1px;
     border-color:#6f9fec;
@@ -43,13 +49,17 @@ input {
     border-width: 1px;
     border-color:#96baf5;
     border-radius: 10px;
-    background-color:#bedcee;
+    background-color:#d9e8f1;
     box-shadow: 0 5px 5px #6f9fec;
 
 }
 
 .tile .is-parent {
-    color: #3a86ff;
-    background-color:transparent;
+    background: rgb(246, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color:#96baf5;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px #6f9fec;
     font-family: 'Ovo', serif;
 }
