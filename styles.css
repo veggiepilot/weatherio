@@ -1,35 +1,32 @@
-body {
-    color: #232529;
-    background: rgb(0,8,36);
-    background: rgb(246, 255, 255);
-    font-family: 'Montserrat', sans-serif;
+
+/*  light mode */
+
+/* body {
+    color: #3a86ff;
+   background: rgb(0,8,36);
+   background: white;
+    font-family: 'Ovo', serif;
 }
 
 h1 {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ovo', serif;
     font-size: 72px;
 }
 
 h2 {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ovo', serif;
     font-size: 40px;
 }
 
-p {  
+
+p { 
     font-family: 'Montserrat', sans-serif;
     color: #3a86ff;
 }
 
-
 .button {
-    border-style: solid;
-    border-width: 1px;
-    border-color:#6f9fec;
-}
-
-.data-button {
     border-style: solid;
     border-width: 1px;
     border-color:#6f9fec;
@@ -49,17 +46,99 @@ input {
     border-width: 1px;
     border-color:#96baf5;
     border-radius: 10px;
-    background-color:#d9e8f1;
+    background-color:#eef3f6;
     box-shadow: 0 5px 5px #6f9fec;
 
 }
 
 .tile .is-parent {
+    color: #3a86ff;
+    background-color:transparent;
+    font-family: 'Ovo', serif;
+} */
+
+
+
+/* dark mode  */
+
+
+body {
+    color: #4e327c;
+    background: rgb(42, 39, 39);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: #4e327c;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+}
+
+h2 {
+    color: #85578b;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+p {  
+    font-family: 'Montserrat', sans-serif;
+    color: #e6e0eb;
+}
+
+.title {  
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(224, 110, 200);
+}
+
+.level {  
+    color:rgb(224, 110, 200);
+}
+
+.button {
+    color:rgb(224, 110, 200);
+    border-style: solid;
+    border-width: 1px;
+    border-color:#7e08c2;
+    background-color:transparent;
+}
+
+.data-button {
+    color:rgb(224, 110, 200);
+    border-style: solid;
+    border-width: 1px;
+    border-color:#7e08c2;
+    background-color:transparent;
+}
+
+span {
+    
+    background-color:transparent;
+}
+
+input {
+    
+    background-color:transparent;
+}
+
+.card {
+    color:rgb(224, 110, 200);
+    border-style: solid;
+    border-width: 1px;
+    border-color:#9811ce;
+    border-radius: 10px;
+    background-color:#3d3a3a;
+    box-shadow: 2px 2px 1px #515152;
+}
+
+.tile .is-parent {
+
+    color:rgb(224, 110, 200);
     background: rgb(246, 255, 255);
     border-style: solid;
     border-width: 1px;
-    border-color:#96baf5;
+    border-color:#6c8fc7;
     border-radius: 10px;
-    box-shadow: 0 5px 5px #6f9fec;
     font-family: 'Ovo', serif;
 }
