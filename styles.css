@@ -1,5 +1,9 @@
 
 /*  light mode */
+header {
+    padding: 20px;
+    margin-top: 50px;
+}
 
 body {
     color: #3a86ff;
