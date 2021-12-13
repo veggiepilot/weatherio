@@ -1,7 +1,7 @@
 
 /*  light mode */
 
-/* body {
+body {
     color: #3a86ff;
    background: rgb(0,8,36);
    background: white;
@@ -55,13 +55,21 @@ input {
     color: #3a86ff;
     background-color:transparent;
     font-family: 'Ovo', serif;
-} */
+}
 
+i {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
 
 
 /* dark mode  */
 
+/*  future toggle for light and dark mode. 
+feel free to comment out above and free up the code below to see the dark mode theme */
 
+/* 
 body {
     color: #4e327c;
     background: rgb(42, 39, 39);
@@ -72,14 +80,14 @@ h1 {
     color: #4e327c;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 72px;
+    font-size: 50px;
 }
 
 h2 {
     color: #85578b;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+    font-size: auto;
 }
 
 p {  
@@ -142,3 +150,9 @@ input {
     border-radius: 10px;
     font-family: 'Ovo', serif;
 }
+
+i {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+} */
